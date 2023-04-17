@@ -155,16 +155,4 @@ CMakeFiles/launch.dir/main.cpp.obj: \
  c:\mingw64\include\c++\12.2.0\tr1\poly_laguerre.tcc \
  c:\mingw64\include\c++\12.2.0\tr1\riemann_zeta.tcc \
  c:\mingw64\include\c++\12.2.0\utility \
- c:\mingw64\include\c++\12.2.0\bits\stl_relops.h \
- c:\mingw64\include\c++\12.2.0\unordered_map \
- c:\mingw64\include\c++\12.2.0\ext\aligned_buffer.h \
- c:\mingw64\include\c++\12.2.0\bits\hashtable.h \
- c:\mingw64\include\c++\12.2.0\bits\hashtable_policy.h \
- c:\mingw64\include\c++\12.2.0\tuple \
- c:\mingw64\include\c++\12.2.0\bits\uses_allocator.h \
- c:\mingw64\include\c++\12.2.0\bits\enable_special_members.h \
- c:\mingw64\include\c++\12.2.0\bits\node_handle.h \
- c:\mingw64\include\c++\12.2.0\bits\unordered_map.h \
- c:\mingw64\include\c++\12.2.0\bits\erase_if.h \
- c:\mingw64\include\c++\12.2.0\unordered_set \
- c:\mingw64\include\c++\12.2.0\bits\unordered_set.h
+ c:\mingw64\include\c++\12.2.0\bits\stl_relops.h

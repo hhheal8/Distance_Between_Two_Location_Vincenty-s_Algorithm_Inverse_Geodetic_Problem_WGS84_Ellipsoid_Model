@@ -1,9 +1,8 @@
 #include "LocationData.hpp"
 
-#include <unordered_map>
-#include <unordered_set>
+#include <cmath>
+#include <limits>
 #include <string>
-#include <stdexcept>
 #include <utility>
 
 LocationData::LocationData(std::string location_name, double longitude, double latitude):
@@ -122,7 +121,13 @@ auto LocationData::vincenty_algorithm_inverse_geodetic_problem_WGS84(const Locat
   double u_sq{cos_sq_alpha * (a * a - b * b) / (b * b)};
   double A{1 + u_sq / 16384 * (4096 + u_sq * (-768 + u_sq * (320 - 175 * u_sq)))};
   double B{u_sq / 1024 * (256 + u_sq * (-128 + u_sq * (74 - 47 * u_sq)))};
-  double delta_sigma{B * sin_sigma * (cos2_sigma_M + B / 4 * (cos_sigma * (-1 + 2 * std::pow(cos2_sigma_M, 2)) - B / 6 * cos2_sigma_M * (-3 + 4 * std::pow(sin_sigma, 2)) * (-3 + 4 * std::pow(cos2_sigma_M, 2))))};
+  double delta_sigma{
+    B * sin_sigma * (
+      cos2_sigma_M + B / 4 * (
+        cos_sigma * (-1 + 2 * std::pow(cos2_sigma_M, 2)) - B / 6 * cos2_sigma_M * (-3 + 4 * std::pow(sin_sigma, 2)) * (-3 + 4 * std::pow(cos2_sigma_M, 2))
+      )
+    )
+  };
 
   return b * A * (sigma - delta_sigma);
 

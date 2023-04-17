@@ -4,10 +4,7 @@
 #include <cmath>
 #include <limits>
 #include <string>
-#include <stdexcept>
 #include <utility>
-#include <unordered_map>
-#include <unordered_set>
 
 namespace WGS84 {
   constexpr double PI{3.14159265358979323846};
