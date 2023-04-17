@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/launch.dir/includes_CXX.rsp -g -o CMakeFiles\\launch.dir\\main.cpp.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\main.cpp",
+  "file": "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/main.cpp",
+  "output": "CMakeFiles/launch.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/launch.dir/includes_CXX.rsp -g -o CMakeFiles\\launch.dir\\sources\\LocationData.cpp.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\sources\\LocationData.cpp",
+  "file": "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/sources/LocationData.cpp",
+  "output": "CMakeFiles/launch.dir/sources/LocationData.cpp.obj"
+}
+]
