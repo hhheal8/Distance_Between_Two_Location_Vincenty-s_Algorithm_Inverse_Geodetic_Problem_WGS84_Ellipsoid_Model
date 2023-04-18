@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <limits>
+#include <stdexcept>
 #include <string>
 #include <utility>
 
@@ -17,6 +18,16 @@ class LocationData {
   private:
     std::string m_location_name{};
     long double m_latitude{}, m_longitude{};
+
+    const std::string error_location_name{
+      "\nLocationData(!!!INVALID FORMAT/INPUT!!!, " + std::to_string(get_latitude()) + ", " + std::to_string(get_longitude()) + ")\nLocation name should not be empty.\n"
+    };
+    const std::string error_latitude{
+      "\nLocationData(" + get_location_name() + ", !!!INVALID FORMAT/INPUT!!!, " + std::to_string(get_longitude()) + ")\nLatitude value should be within the range of -90 to 90 degrees.\n"
+    };
+    const std::string error_longitude{
+      "\nLocationData(" + get_location_name() + ", " + std::to_string(get_latitude()) + ", !!!INVALID FORMAT/INPUT!!!)\nLongitude value should be within the range of -180 to 180 degrees.\n"
+    };
 
     auto to_radians(long double degrees) -> long double;
     auto vincenty_algorithm_inverse_geodetic_problem_WGS84(const LocationData &point) -> long double;

@@ -2,25 +2,46 @@
 
 #include <cmath>
 #include <limits>
+#include <stdexcept>
 #include <string>
 #include <utility>
 
+//TODO - Constructor
 LocationData::LocationData(std::string location_name, long double latitude, long double longitude):
 m_location_name{location_name}, m_latitude{latitude}, m_longitude{longitude} {
-  //TODO - Constructor
+  if(location_name.empty()) {
+    throw std::invalid_argument(error_location_name);
+  }
+  if(latitude < -90.0L || latitude > 90.0L) {
+    throw std::invalid_argument(error_latitude);
+  }
+  if(longitude < -180.0L || longitude > 180.0L) {
+    throw std::invalid_argument(error_longitude);
+  }
 }
 
+//TODO - Copy Constructor
 LocationData::LocationData(const LocationData &other):
 m_location_name{other.m_location_name}, m_latitude{other.m_latitude}, m_longitude{other.m_longitude} {
-  //TODO - Copy Constructor
-}
-LocationData::LocationData(LocationData &&other) noexcept:
-m_location_name{std::move(other.m_location_name)}, m_latitude{std::move(other.m_latitude)}, m_longitude{std::move(other.m_longitude)} {
-  //TODO - Move Constructor
+  if(other.m_location_name.empty()) {
+    throw std::invalid_argument(other.error_location_name);
+  }
+  if(other.m_latitude < -90.0L || other.m_latitude > 90.0L) {
+    throw std::invalid_argument(other.error_latitude);
+  }
+  if(other.m_longitude < -180.0L || other.m_longitude > 180.0L) {
+    throw std::invalid_argument(other.error_longitude);
+  }
 }
 
+//TODO - Move Constructor
+LocationData::LocationData(LocationData &&other) noexcept:
+m_location_name{std::move(other.m_location_name)}, m_latitude{std::move(other.m_latitude)}, m_longitude{std::move(other.m_longitude)} {
+  //TODO - Empty
+}
+
+//TODO - Copy Assignment
 LocationData &LocationData::operator=(const LocationData &other) {
-  //NOTE - Copy Assignment
   if(this != &other) {
     m_location_name = other.m_location_name;
     m_latitude      = other.m_latitude;
@@ -28,8 +49,9 @@ LocationData &LocationData::operator=(const LocationData &other) {
   }
   return *this;
 }
+
+//TODO - Move Assignment
 LocationData &LocationData::operator=(LocationData &&other) noexcept {
-  //TODO - Move Assignment
   if(this != &other) {
     m_location_name = std::move(other.m_location_name);
     m_latitude      = std::move(other.m_latitude);
