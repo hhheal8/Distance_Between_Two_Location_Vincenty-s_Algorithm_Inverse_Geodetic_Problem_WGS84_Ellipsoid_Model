@@ -13,12 +13,12 @@
 
 auto main(int argc, char **argv) -> decltype(argc) {
 
-  LocationData *japan_capital{new LocationData{"Tokyo, Japan", 139.839478, 35.652832}};
-  LocationData *philippines_capital{new LocationData{"Manila, Philippines", 120.984222, 14.599512}};
+  LocationData *japan_capital{new LocationData{"Tokyo, Japan", 35.652832L, 139.839478L}};
+  LocationData *philippines_capital{new LocationData{"Manila, Philippines", 14.599512L, 120.984222L}};
 
-  double distance{japan_capital->distance_to(*philippines_capital)};
+  long double distance{japan_capital->distance_to(*philippines_capital)};
 
-  std::cout << "Distance: " << distance << " meters\n";
+  std::cout << "Approximate Distance: " << distance << " meters\n";
 
   delete japan_capital;
   japan_capital = nullptr;
