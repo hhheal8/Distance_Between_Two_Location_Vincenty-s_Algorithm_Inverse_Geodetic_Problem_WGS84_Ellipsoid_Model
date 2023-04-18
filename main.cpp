@@ -21,6 +21,19 @@ auto main(int argc, char **argv) -> decltype(argc) {
 
   const long double distance{japan_capital->distance_to(*philippines_capital)};
 
+  std::vector<long double> japan_philippines_longitude{japan_capital->get_longitude(), philippines_capital->get_longitude()};
+  std::vector<long double> japan_philippines_latitude{japan_capital->get_latitude(), philippines_capital->get_latitude()};
+
+  matplot::geoplot(japan_philippines_longitude, japan_philippines_latitude);
+  matplot::hold(matplot::on);
+  matplot::plot(japan_philippines_longitude, japan_philippines_latitude);
+  matplot::title("Tokyo, Japan to Manila, Philippines Approximate Distance: " + std::to_string(distance) + " meters");
+  
+  matplot::show();
+
+  matplot::save("../data/distance_tokyo_japan_manila_philippines.png");
+  matplot::save("../data/distance_tokyo_japan_manila_philippines.svg");
+
   std::cout << "Approximate Distance: " << distance << " meters\n";
 
   delete japan_capital;
