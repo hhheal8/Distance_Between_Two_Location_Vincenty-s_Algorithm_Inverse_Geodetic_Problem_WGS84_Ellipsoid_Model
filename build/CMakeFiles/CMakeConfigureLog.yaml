@@ -628,3 +628,300 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:367 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:411 (check_blas_libraries)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:199 (find_dependency)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-va7gf3"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-va7gf3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "BLAS_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-va7gf3
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_44331/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_44331.dir\\build.make CMakeFiles/cmTC_44331.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-va7gf3'
+        Building C object CMakeFiles/cmTC_44331.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles\\cmTC_44331.dir\\CheckFunctionExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-va7gf3\\CheckFunctionExists.c
+        Linking C executable cmTC_44331.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_44331.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_44331.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_44331.dir/objects.a @CMakeFiles\\cmTC_44331.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=sgemm_ -Wl,--whole-archive CMakeFiles\\cmTC_44331.dir/objects.a -Wl,--no-whole-archive -o cmTC_44331.exe -Wl,--out-implib,libcmTC_44331.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_44331.dir\\linkLibs.rsp
+        c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_44331.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `sgemm_'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_44331.dir\\build.make:100: cmTC_44331.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-va7gf3'
+        mingw32-make: *** [Makefile:126: cmTC_44331/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:463 (find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:199 (find_dependency)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0fa23/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0fa23.dir\\build.make CMakeFiles/cmTC_0fa23.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8'
+        Building C object CMakeFiles/cmTC_0fa23.dir/src.c.obj
+        C:\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_0fa23.dir\\src.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s6h9w8\\src.c
+        Linking C executable cmTC_0fa23.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0fa23.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0fa23.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_0fa23.dir/objects.a @CMakeFiles\\cmTC_0fa23.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_0fa23.dir/objects.a -Wl,--no-whole-archive -o cmTC_0fa23.exe -Wl,--out-implib,libcmTC_0fa23.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_0fa23.dir\\linkLibs.rsp
+        C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8/cmTC_0fa23.exe -installedDir C:/dev/vcpkg/installed/x64-windows/bin -OutVariable out
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-s6h9w8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:367 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:748 (check_blas_libraries)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:199 (find_dependency)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "BLAS_openblas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b987f/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b987f.dir\\build.make CMakeFiles/cmTC_b987f.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv'
+        Building C object CMakeFiles/cmTC_b987f.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles\\cmTC_b987f.dir\\CheckFunctionExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vcnadv\\CheckFunctionExists.c
+        Linking C executable cmTC_b987f.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b987f.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b987f.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b987f.dir/objects.a @CMakeFiles\\cmTC_b987f.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=sgemm_ -Wl,--whole-archive CMakeFiles\\cmTC_b987f.dir/objects.a -Wl,--no-whole-archive -o cmTC_b987f.exe -Wl,--out-implib,libcmTC_b987f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b987f.dir\\linkLibs.rsp
+        C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv/cmTC_b987f.exe -installedDir C:/dev/vcpkg/installed/x64-windows/bin -OutVariable out
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vcnadv'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:287 (check_lapack_libraries)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-0cjoyb"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-0cjoyb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "LAPACK_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-0cjoyb
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0fe0e/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0fe0e.dir\\build.make CMakeFiles/cmTC_0fe0e.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-0cjoyb'
+        Building C object CMakeFiles/cmTC_0fe0e.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles\\cmTC_0fe0e.dir\\CheckFunctionExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0cjoyb\\CheckFunctionExists.c
+        Linking C executable cmTC_0fe0e.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0fe0e.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0fe0e.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_0fe0e.dir/objects.a @CMakeFiles\\cmTC_0fe0e.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=cheev_ -Wl,--whole-archive CMakeFiles\\cmTC_0fe0e.dir/objects.a -Wl,--no-whole-archive -o cmTC_0fe0e.exe -Wl,--out-implib,libcmTC_0fe0e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_0fe0e.dir\\linkLibs.rsp
+        c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_0fe0e.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `cheev_'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_0fe0e.dir\\build.make:101: cmTC_0fe0e.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-0cjoyb'
+        mingw32-make: *** [Makefile:126: cmTC_0fe0e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:350 (check_lapack_libraries)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-lmampk"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-lmampk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "LAPACK_openblas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-lmampk
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_82e6a/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_82e6a.dir\\build.make CMakeFiles/cmTC_82e6a.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-lmampk'
+        Building C object CMakeFiles/cmTC_82e6a.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles\\cmTC_82e6a.dir\\CheckFunctionExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmampk\\CheckFunctionExists.c
+        Linking C executable cmTC_82e6a.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_82e6a.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_82e6a.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_82e6a.dir/objects.a @CMakeFiles\\cmTC_82e6a.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=cheev_ -Wl,--whole-archive CMakeFiles\\cmTC_82e6a.dir/objects.a -Wl,--no-whole-archive -o cmTC_82e6a.exe -Wl,--out-implib,libcmTC_82e6a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_82e6a.dir\\linkLibs.rsp
+        c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_82e6a.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `cheev_'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_82e6a.dir\\build.make:102: cmTC_82e6a.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-lmampk'
+        mingw32-make: *** [Makefile:126: cmTC_82e6a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:457 (check_lapack_libraries)"
+      - "C:/dev/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:9 (_find_package)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)"
+      - "libraries/matplotplusplus/source/3rd_party/CMakeLists.txt:96 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake;C:/dev/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "LAPACK_lapack_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_1e0d5/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1e0d5.dir\\build.make CMakeFiles/cmTC_1e0d5.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8'
+        Building C object CMakeFiles/cmTC_1e0d5.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles\\cmTC_1e0d5.dir\\CheckFunctionExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vpk7c8\\CheckFunctionExists.c
+        Linking C executable cmTC_1e0d5.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1e0d5.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_1e0d5.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_1e0d5.dir/objects.a @CMakeFiles\\cmTC_1e0d5.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=cheev_ -Wl,--whole-archive CMakeFiles\\cmTC_1e0d5.dir/objects.a -Wl,--no-whole-archive -o cmTC_1e0d5.exe -Wl,--out-implib,libcmTC_1e0d5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_1e0d5.dir\\linkLibs.rsp
+        C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8/cmTC_1e0d5.exe -installedDir C:/dev/vcpkg/installed/x64-windows/bin -OutVariable out
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-vpk7c8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckSymbolExists.cmake:71 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "libraries/matplotplusplus/source/matplot/CMakeLists.txt:141 (check_symbol_exists)"
+    checks:
+      - "Looking for __fbufsize"
+    directories:
+      source: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-r2vf19"
+      binary: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-r2vf19"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/libraries/matplotplusplus/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "HAVE_FBUFSIZE"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-r2vf19
+        
+        Run Build Command(s):C:/Program Files/CMake/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_f21aa/fast && C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f21aa.dir\\build.make CMakeFiles/cmTC_f21aa.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-r2vf19'
+        Building C object CMakeFiles/cmTC_f21aa.dir/CheckSymbolExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_f21aa.dir\\CheckSymbolExists.c.obj -c C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2vf19\\CheckSymbolExists.c
+        C:\\Users\\csgil\\Desktop\\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2vf19\\CheckSymbolExists.c:2:10: fatal error: stdio_ext.h: No such file or directory
+            2 | #include <stdio_ext.h>
+              |          ^~~~~~~~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_f21aa.dir\\build.make:77: CMakeFiles/cmTC_f21aa.dir/CheckSymbolExists.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build/CMakeFiles/CMakeScratch/TryCompile-r2vf19'
+        mingw32-make: *** [Makefile:126: cmTC_f21aa/fast] Error 2
+        
+      exitCode: 2
+...

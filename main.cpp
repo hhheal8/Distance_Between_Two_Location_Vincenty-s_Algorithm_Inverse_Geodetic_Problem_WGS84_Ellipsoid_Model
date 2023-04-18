@@ -1,5 +1,8 @@
 #include <iostream>
 #include "LocationData.hpp"
+#include <matplot/matplot.h>
+#include <string>
+#include <vector>
 
 //REVIEW - Vincenty's Formulae Algorithm Inverse Geodetic Problem
 //LINK - https://en.wikipedia.org/wiki/Vincenty%27s_formulae#Inverse_problem
@@ -16,7 +19,7 @@ auto main(int argc, char **argv) -> decltype(argc) {
   LocationData *japan_capital{new LocationData{"Tokyo, Japan", 35.652832L, 139.839478L}};
   LocationData *philippines_capital{new LocationData{"Manila, Philippines", 14.599512L, 120.984222L}};
 
-  long double distance{japan_capital->distance_to(*philippines_capital)};
+  const long double distance{japan_capital->distance_to(*philippines_capital)};
 
   std::cout << "Approximate Distance: " << distance << " meters\n";
 

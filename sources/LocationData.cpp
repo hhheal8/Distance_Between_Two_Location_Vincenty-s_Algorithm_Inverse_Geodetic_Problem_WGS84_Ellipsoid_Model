@@ -37,7 +37,7 @@ m_location_name{other.m_location_name}, m_latitude{other.m_latitude}, m_longitud
 //TODO - Move Constructor
 LocationData::LocationData(LocationData &&other) noexcept:
 m_location_name{std::move(other.m_location_name)}, m_latitude{std::move(other.m_latitude)}, m_longitude{std::move(other.m_longitude)} {
-  //TODO - Empty
+  //TODO - Move Constructor empty
 }
 
 //TODO - Copy Assignment
@@ -88,18 +88,18 @@ auto LocationData::to_radians(long double degrees) -> long double {
 
 auto LocationData::vincenty_algorithm_inverse_geodetic_problem_WGS84(const LocationData &point) -> long double {
 
-  long double f{WGS84::FLATTENING_WGS84_ELLIPSOID};                                //NOTE - Flattening of the ellipsoid
-  long double a{WGS84::EARTH_RADIUS_WGS84};                                        //NOTE - Length of semi-major axis of the ellipsoid (radius at equator)
-  long double b{a * (1 - f)};                                                      //NOTE - Length of semi-minor axis of the ellipsoid (radius at the poles)
-  long double L{to_radians((point.get_longitude() - get_longitude()))};            //NOTE - Difference in longitude of the points on the auxiliary sphere
-  long double U1{std::atan((1 - f) * std::tan(to_radians(get_latitude())))};       //NOTE - Reduced latitude (latitude on the auxiliary sphere)
-  long double U2{std::atan((1 - f) * std::tan(to_radians(point.get_latitude())))}; //NOTE - Reduced latitude (latitude on the auxiliary sphere)
-  long double sinU1{std::sin(U1)};
-  long double sinU2{std::sin(U2)};
-  long double cosU1{std::cos(U1)};
-  long double cosU2{std::cos(U2)};
-  long double lambda{L};
-  long double lambda_p{2 * WGS84::PI};
+  constexpr long double f{WGS84::FLATTENING_WGS84_ELLIPSOID};                                //NOTE - Flattening of the ellipsoid
+  constexpr long double a{WGS84::EARTH_RADIUS_WGS84};                                        //NOTE - Length of semi-major axis of the ellipsoid (radius at equator)
+  constexpr long double b{a * (1 - f)};                                                      //NOTE - Length of semi-minor axis of the ellipsoid (radius at the poles)
+  const long double     L{to_radians((point.get_longitude() - get_longitude()))};            //NOTE - Difference in longitude of the points on the auxiliary sphere
+  const long double     U1{std::atan((1 - f) * std::tan(to_radians(get_latitude())))};       //NOTE - Reduced latitude (latitude on the auxiliary sphere)
+  const long double     U2{std::atan((1 - f) * std::tan(to_radians(point.get_latitude())))}; //NOTE - Reduced latitude (latitude on the auxiliary sphere)
+  const long double     sinU1{std::sin(U1)};
+  const long double     sinU2{std::sin(U2)};
+  const long double     cosU1{std::cos(U1)};
+  const long double     cosU2{std::cos(U2)};
+  long double           lambda{L};
+  long double           lambda_p{2 * WGS84::PI};
 
   long double sin_lambda{}, 
               cos_lambda{}, 
@@ -144,10 +144,10 @@ auto LocationData::vincenty_algorithm_inverse_geodetic_problem_WGS84(const Locat
     return std::numeric_limits<long double>::quiet_NaN();
   }
 
-  long double u_sq{cos_sq_alpha * (a * a - b * b) / (b * b)};
-  long double A{1 + u_sq / 16384 * (4096 + u_sq * (-768 + u_sq * (320 - 175 * u_sq)))};
-  long double B{u_sq / 1024 * (256 + u_sq * (-128 + u_sq * (74 - 47 * u_sq)))};
-  long double delta_sigma{
+  const long double u_sq{cos_sq_alpha * (a * a - b * b) / (b * b)};
+  const long double A{1 + u_sq / 16384 * (4096 + u_sq * (-768 + u_sq * (320 - 175 * u_sq)))};
+  const long double B{u_sq / 1024 * (256 + u_sq * (-128 + u_sq * (74 - 47 * u_sq)))};
+  const long double delta_sigma{
     B * sin_sigma * (
       cos2_sigma_M + B / 4 * (
         cos_sigma * (-1 + 2 * std::pow(cos2_sigma_M, 2)) - B / 6 * cos2_sigma_M * (-3 + 4 * std::pow(sin_sigma, 2)) * (-3 + 4 * std::pow(cos2_sigma_M, 2))
@@ -159,7 +159,7 @@ auto LocationData::vincenty_algorithm_inverse_geodetic_problem_WGS84(const Locat
 
 }
 
-auto LocationData::distance_to(const LocationData &point) -> long double {
+auto LocationData::distance_to(const LocationData &point) -> const long double {
   return vincenty_algorithm_inverse_geodetic_problem_WGS84(point) / 1e6L;
 }
 

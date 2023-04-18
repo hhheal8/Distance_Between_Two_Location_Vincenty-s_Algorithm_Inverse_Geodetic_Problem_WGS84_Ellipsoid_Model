@@ -52,7 +52,7 @@ class LocationData {
     auto get_latitude() const -> const long double;
     auto get_longitude() const -> const long double;
 
-    auto distance_to(const LocationData &point) -> long double;
+    auto distance_to(const LocationData &point) -> const long double;
 
     ~LocationData();
 

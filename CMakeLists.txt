@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(launch VERSION 0.1.0)
 
+add_subdirectory(libraries/matplotplusplus)
+
 add_executable(
   launch
   main.cpp
@@ -12,3 +14,4 @@ target_include_directories(
   launch PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/includes
 )
 
+target_link_libraries(launch PRIVATE matplot)

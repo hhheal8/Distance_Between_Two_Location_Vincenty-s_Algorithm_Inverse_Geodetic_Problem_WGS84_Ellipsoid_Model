@@ -128,6 +128,32 @@ launch/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\launch.dir\build.make CMakeFiles/launch.dir/build
 .PHONY : launch/fast
 
+#=============================================================================
+# Target rules for targets named nodesoup
+
+# Build rule for target.
+nodesoup: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 nodesoup
+.PHONY : nodesoup
+
+# fast build rule for target.
+nodesoup/fast:
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\3rd_party\CMakeFiles\nodesoup.dir\build.make libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/build
+.PHONY : nodesoup/fast
+
+#=============================================================================
+# Target rules for targets named matplot
+
+# Build rule for target.
+matplot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 matplot
+.PHONY : matplot
+
+# fast build rule for target.
+matplot/fast:
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\matplot\CMakeFiles\matplot.dir\build.make libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/build
+.PHONY : matplot/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -185,6 +211,8 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... launch
+	@echo ... matplot
+	@echo ... nodesoup
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -109,6 +109,10 @@ launch_EXTERNAL_OBJECTS =
 launch.exe: CMakeFiles/launch.dir/main.cpp.obj
 launch.exe: CMakeFiles/launch.dir/sources/LocationData.cpp.obj
 launch.exe: CMakeFiles/launch.dir/build.make
+launch.exe: libraries/matplotplusplus/source/matplot/libmatplot.a
+launch.exe: C:/dev/vcpkg/installed/x64-windows/debug/lib/liblapack.dll.a
+launch.exe: C:/dev/vcpkg/installed/x64-windows/debug/lib/openblas.lib
+launch.exe: libraries/matplotplusplus/source/3rd_party/libnodesoup.a
 launch.exe: CMakeFiles/launch.dir/linkLibs.rsp
 launch.exe: CMakeFiles/launch.dir/objects1.rsp
 launch.exe: CMakeFiles/launch.dir/link.txt

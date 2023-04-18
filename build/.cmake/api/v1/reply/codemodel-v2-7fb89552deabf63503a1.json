@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "libraries/matplotplusplus",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-libraries.matplotplusplus-Debug-b6d2895e02b513311c26.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libraries/matplotplusplus"
+				},
+				{
+					"build" : "libraries/matplotplusplus/source",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"jsonFile" : "directory-libraries.matplotplusplus.source-Debug-5f6aa2c7ba220cc3c831.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "libraries/matplotplusplus/source"
+				},
+				{
+					"build" : "libraries/matplotplusplus/source/3rd_party",
+					"jsonFile" : "directory-libraries.matplotplusplus.source.3rd_party-Debug-d833e1f089d317a51d23.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "libraries/matplotplusplus/source/3rd_party",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "libraries/matplotplusplus/source/matplot",
+					"jsonFile" : "directory-libraries.matplotplusplus.source.matplot-Debug-73599b4934fa620cf2e4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "libraries/matplotplusplus/source/matplot",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "launch",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "Matplot++",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "launch::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-launch-Debug-f6f9aca896524128bff3.json",
+					"name" : "launch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "matplot::@f701181f84f52e43546c",
+					"jsonFile" : "target-matplot-Debug-d9d8745aa583046924e2.json",
+					"name" : "matplot",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "nodesoup::@64aa7839c475ca8bcfe7",
+					"jsonFile" : "target-nodesoup-Debug-2afed72256f79519d448.json",
+					"name" : "nodesoup",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model/build",
+		"source" : "C:/Users/csgil/Desktop/Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

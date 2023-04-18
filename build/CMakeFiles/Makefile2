@@ -63,21 +63,87 @@ CMAKE_BINARY_DIR = C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty
 
 # The main recursive "all" target.
 all: CMakeFiles/launch.dir/all
+all: libraries/matplotplusplus/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: libraries/matplotplusplus/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/launch.dir/clean
+clean: libraries/matplotplusplus/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory libraries/matplotplusplus
+
+# Recursive "all" directory target.
+libraries/matplotplusplus/all: libraries/matplotplusplus/source/all
+.PHONY : libraries/matplotplusplus/all
+
+# Recursive "preinstall" directory target.
+libraries/matplotplusplus/preinstall: libraries/matplotplusplus/source/preinstall
+.PHONY : libraries/matplotplusplus/preinstall
+
+# Recursive "clean" directory target.
+libraries/matplotplusplus/clean: libraries/matplotplusplus/source/clean
+.PHONY : libraries/matplotplusplus/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/matplotplusplus/source
+
+# Recursive "all" directory target.
+libraries/matplotplusplus/source/all: libraries/matplotplusplus/source/3rd_party/all
+libraries/matplotplusplus/source/all: libraries/matplotplusplus/source/matplot/all
+.PHONY : libraries/matplotplusplus/source/all
+
+# Recursive "preinstall" directory target.
+libraries/matplotplusplus/source/preinstall: libraries/matplotplusplus/source/3rd_party/preinstall
+libraries/matplotplusplus/source/preinstall: libraries/matplotplusplus/source/matplot/preinstall
+.PHONY : libraries/matplotplusplus/source/preinstall
+
+# Recursive "clean" directory target.
+libraries/matplotplusplus/source/clean: libraries/matplotplusplus/source/3rd_party/clean
+libraries/matplotplusplus/source/clean: libraries/matplotplusplus/source/matplot/clean
+.PHONY : libraries/matplotplusplus/source/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/matplotplusplus/source/3rd_party
+
+# Recursive "all" directory target.
+libraries/matplotplusplus/source/3rd_party/all: libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all
+.PHONY : libraries/matplotplusplus/source/3rd_party/all
+
+# Recursive "preinstall" directory target.
+libraries/matplotplusplus/source/3rd_party/preinstall:
+.PHONY : libraries/matplotplusplus/source/3rd_party/preinstall
+
+# Recursive "clean" directory target.
+libraries/matplotplusplus/source/3rd_party/clean: libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/clean
+.PHONY : libraries/matplotplusplus/source/3rd_party/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/matplotplusplus/source/matplot
+
+# Recursive "all" directory target.
+libraries/matplotplusplus/source/matplot/all: libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/all
+.PHONY : libraries/matplotplusplus/source/matplot/all
+
+# Recursive "preinstall" directory target.
+libraries/matplotplusplus/source/matplot/preinstall:
+.PHONY : libraries/matplotplusplus/source/matplot/preinstall
+
+# Recursive "clean" directory target.
+libraries/matplotplusplus/source/matplot/clean: libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/clean
+.PHONY : libraries/matplotplusplus/source/matplot/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/launch.dir
 
 # All Build rule for target.
-CMakeFiles/launch.dir/all:
+CMakeFiles/launch.dir/all: libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/all
+CMakeFiles/launch.dir/all: libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\launch.dir\build.make CMakeFiles/launch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\launch.dir\build.make CMakeFiles/launch.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles --progress-num=1,2,3 "Built target launch"
@@ -85,7 +151,7 @@ CMakeFiles/launch.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 0
 .PHONY : CMakeFiles/launch.dir/rule
@@ -98,6 +164,58 @@ launch: CMakeFiles/launch.dir/rule
 CMakeFiles/launch.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\launch.dir\build.make CMakeFiles/launch.dir/clean
 .PHONY : CMakeFiles/launch.dir/clean
+
+#=============================================================================
+# Target rules for target libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir
+
+# All Build rule for target.
+libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all:
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\3rd_party\CMakeFiles\nodesoup.dir\build.make libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\3rd_party\CMakeFiles\nodesoup.dir\build.make libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles --progress-num=41,42,43,44,45,46 "Built target nodesoup"
+.PHONY : libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 0
+.PHONY : libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/rule
+
+# Convenience name for target.
+nodesoup: libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/rule
+.PHONY : nodesoup
+
+# clean rule for target.
+libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\3rd_party\CMakeFiles\nodesoup.dir\build.make libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/clean
+.PHONY : libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/clean
+
+#=============================================================================
+# Target rules for target libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir
+
+# All Build rule for target.
+libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/all: libraries/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\matplot\CMakeFiles\matplot.dir\build.make libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\matplot\CMakeFiles\matplot.dir\build.make libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target matplot"
+.PHONY : libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 43
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\csgil\Desktop\Distance_Between_Two_Location_Vincenty-s_Algorithm_Inverse_Geodetic_Problem_WGS84_Ellipsoid_Model\build\CMakeFiles 0
+.PHONY : libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/rule
+
+# Convenience name for target.
+matplot: libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/rule
+.PHONY : matplot
+
+# clean rule for target.
+libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries\matplotplusplus\source\matplot\CMakeFiles\matplot.dir\build.make libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/clean
+.PHONY : libraries/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

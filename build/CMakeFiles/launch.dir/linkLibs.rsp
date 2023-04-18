@@ -1,1 +1,1 @@
- -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ libraries/matplotplusplus/source/matplot/libmatplot.a "C:/dev/vcpkg/installed/x64-windows/debug/lib/liblapack.dll.a" "C:/dev/vcpkg/installed/x64-windows/debug/lib/openblas.lib" -lgdi32 libraries/matplotplusplus/source/3rd_party/libnodesoup.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
